@@ -7,7 +7,6 @@ import type { Endpoint, EndpointsToOperations } from '../types/entities.js';
 export async function fetchData<Selected extends Endpoint>(endpoint: Selected) {
 	const apiEndpoint = `${API_URL}${endpoint}`;
 
-	console.info(`Fetching ${apiEndpoint}…`);
 	return fetch(apiEndpoint)
 		.then(
 			(r) =>
@@ -15,8 +14,7 @@ export async function fetchData<Selected extends Endpoint>(endpoint: Selected) {
 					ReturnType<EndpointsToOperations[Selected]>
 				>,
 		)
-		.catch((e) => {
-			console.error(e);
+		.catch((_e) => {
 			throw Error('Invalid API data!');
 		});
 }
