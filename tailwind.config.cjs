@@ -5,6 +5,12 @@ module.exports = {
 		//
 		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
 		'./node_modules/flowbite/**/*.js',
+		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 
 	darkMode: 'class',
@@ -27,7 +33,9 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: [
-					'Inter',
+					'Alta',
+					'GeistSans',
+					'Poppins',
 					'ui-sans-serif',
 					'system-ui',
 					'-apple-system',
@@ -44,7 +52,8 @@ module.exports = {
 					'Noto Color Emoji',
 				],
 				body: [
-					'Inter',
+					'Poppins',
+					'GeistSans',
 					'ui-sans-serif',
 					'system-ui',
 					'-apple-system',
@@ -61,6 +70,7 @@ module.exports = {
 					'Noto Color Emoji',
 				],
 				mono: [
+					'GeistMono',
 					'ui-monospace',
 					'SFMono-Regular',
 					'Menlo',
